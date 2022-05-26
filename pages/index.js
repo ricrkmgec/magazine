@@ -12,7 +12,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   async function handleSubmit(e) {
     e.preventDefault();
-    const certApi = await fetch("https://rkmgecece.vercel.app/api/certificate", {
+    const certApi = await fetch("https://rkmgecece.netlify.app/api/certificate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export default function Home() {
           <metadata></metadata>
         </Head>
         {reseterror ? (<ToastContainer />) : ""}
-        <Navbar href={`https://rkmgecece.vercel.app/verify`} text={'Verify'} />
+        <Navbar href={`https://rkmgecece.netlify.app/verify`} text={'Verify'} />
         <form onSubmit={handleSubmit}>
           <div className=' flex flex-col  align-middle relative m-auto  p-4 sm:p-16 '>
             <div className='bold text-xl sm:text-4xl  m-4 text-lime-500 mx-auto'><h1>Welcome to <span className='font-semibold  text-green-600'>ECE</span> magazine, Rkmgec</h1></div>

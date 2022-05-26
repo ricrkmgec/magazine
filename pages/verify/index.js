@@ -13,7 +13,7 @@ export default function Index() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const verifyApi = await fetch("https://rkmgecece.vercel.app/api/certificate/verify", {
+    const verifyApi = await fetch("https://rkmgecece.netlify.app/api/certificate/verify", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export default function Index() {
           <metadata></metadata>
         </Head>
         {reseterror ? (<ToastContainer />) : ""}
-        <Navbar href={`https://rkmgecece.vercel.app/`} text={'Home'} />
+        <Navbar href={`https://rkmgecece.netlify.app/`} text={'Home'} />
         <form onSubmit={handleSubmit}>
           <div className=' flex flex-col  align-middle relative m-auto  p-4 sm:p-16 '>
 
