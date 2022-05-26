@@ -28,7 +28,7 @@ export default function Index() {
     });
     let data = await verifyApi.json();
     if (data.success) {
-      router.push(`./verify/${data.user.roll}`);
+      router.push(`https://rkmgecece.vercel.app/verify/${data.user.roll}`);
       toast.success(data.message);
     } else {
       setReseterror(true)

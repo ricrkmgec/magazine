@@ -27,7 +27,7 @@ export default function Home() {
 
     let data = await certApi.json();
     if (data.success) {
-      router.push(`./certificate/${data._id}`);
+      router.push(`https://rkmgecece.vercel.app/certificate/${data._id}`);
       toast.success(data.message);
     } else {
       setReseterror(true)
