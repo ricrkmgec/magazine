@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../public/ece logo.jpg'
+import logo from '../public/logo.jpg'
 import Link from 'next/link'
 function Navbar({ wid, name, href, text }) {
   return (
