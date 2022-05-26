@@ -29,9 +29,9 @@ export default function Certificates({ cert }) {
   )
 }
 
-export async function getStaticProps(query) {
+export async function getServerSideProps(query) {
   const roll = query.query.roll;
-  console.log(roll)
+  // console.log(roll)
   const cert = await Certificate.findOne({ roll }).lean();
   return {
     props: {
