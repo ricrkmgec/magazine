@@ -12,7 +12,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   async function handleSubmit(e) {
     e.preventDefault();
-    const certApi = await fetch("./api/certificate", {
+    const certApi = await fetch("https://rkmgecece.vercel.app/api/certificate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export default function Home() {
 
     let data = await certApi.json();
     if (data.success) {
-      router.push(`https://rkmgecece.vercel.app/certificate/${data._id}`);
+      router.push(`./certificate/${data._id}`);
       toast.success(data.message);
     } else {
       setReseterror(true)

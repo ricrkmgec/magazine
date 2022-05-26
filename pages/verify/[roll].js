@@ -3,9 +3,9 @@ import Head from 'next/head'
 import Certificate from "../../models/Certificate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+
 export default function Certificates({ cert }) {
   return (
     <>
@@ -30,7 +30,8 @@ export default function Certificates({ cert }) {
 }
 
 export async function getServerSideProps(query) {
-  const roll = query.query.details;
+  const roll = query.query.roll;
+  console.log(roll)
   const cert = await Certificate.findOne({ roll }).lean();
   return {
     props: {

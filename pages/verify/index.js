@@ -13,7 +13,7 @@ export default function Index() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const verifyApi = await fetch("../api/certificate/verify", {
+    const verifyApi = await fetch("https://rkmgecece.vercel.app/api/certificate/verify", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function Index() {
     });
     let data = await verifyApi.json();
     if (data.success) {
-      router.push(`https://rkmgecece.vercel.app/verify/${data.user.roll}`);
+      router.push(`../verify/${data.user.roll}`);
       toast.success(data.message);
     } else {
       setReseterror(true)
