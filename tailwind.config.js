@@ -7,6 +7,9 @@ module.exports = {
         Parisienne: ["Parisienne", "Sail"],
         Italianno: ['Italianno', 'cursive'],
       },
+      width: {
+        '128': '28rem',
+      }
     },
 
    
