@@ -29,7 +29,7 @@ export default function Certificates({ cert }) {
   )
 }
 
-export async function getServerSideProps(query) {
+export async function getStaticProps(query) {
   const roll = query.query.roll;
   console.log(roll)
   const cert = await Certificate.findOne({ roll }).lean();

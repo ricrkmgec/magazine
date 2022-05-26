@@ -56,7 +56,7 @@ export default function Certificates({ cert }) {
   )
 }
 
-export async function getServerSideProps(query) {
+export async function getStaticProps(query) {
   const email = query.query.email;
   const cert = await Certificate.findOne({ email }).lean();
   return {
