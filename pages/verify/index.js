@@ -39,7 +39,15 @@ export default function Index() {
     <>
       <div className='bg-gradient-to-r from-violet-100 to-fuchsia-100'>
         <Head>
-          <title>ECE-RKMGEC Verify</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta charSet="utf-8" />
+          <meta name="description" content="Ramkrishna Mahato Goverment Engineering College ,Purulia" />
+          <meta name="description" content="Electronices and Communication Engineering" />
+          <meta name="description" content="rkmgecece" />
+          <meta name="description" content="ece" />
+          <meta property="og:title" content="My page title" key="title" />
+          <meta property="type" content="Certificate ganerator" />
+          <title>ECE-RKMGEC, Verify</title>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
           <metadata></metadata>
         </Head>

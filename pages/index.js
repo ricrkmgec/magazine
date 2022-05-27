@@ -12,7 +12,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   async function handleSubmit(e) {
     e.preventDefault();
-    const certApi = await fetch("https://rkmgecece.netlify.app/api/certificate", {
+    const certApi = await fetch("./api/certificate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,14 @@ export default function Home() {
         <Head>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <title>ECE-RKMGEC</title>
-          <metadata></metadata>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta charSet="utf-8" />
+          <meta name="description" content="Ramkrishna Mahato Goverment Engineering College ,Purulia" />
+          <meta name="description" content="Electronices and Communication Engineering" />
+          <meta name="description" content="rkmgecece" />
+          <meta name="description" content="ece" />
+          <meta property="og:title" content="My page title" key="title" />
+          <meta property="type" content="Certificate ganerator" />
         </Head>
         {reseterror ? (<ToastContainer />) : ""}
         <Navbar href={`https://rkmgecece.netlify.app/verify`} text={'Verify'} />

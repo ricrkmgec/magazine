@@ -13,6 +13,14 @@ export default function Certificates({ cert }) {
       <div className=' flex flex-col max-w-xl min-w-max m-auto'>
         <Head>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta charSet="utf-8" />
+          <meta name="description" content="Ramkrishna Mahato Goverment Engineering College ,Purulia" />
+          <meta name="description" content="Electronices and Communication Engineering" />
+          <meta name="description" content="rkmgecece" />
+          <meta name="description" content="ece" />
+          <meta property="og:title" content="My page title" key="title" />
+          <meta property="type" content="Certificate ganerator" />
           <title>{cert.name}</title>
         </Head>
         <ToastContainer />
