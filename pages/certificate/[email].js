@@ -23,6 +23,11 @@ export default function Certificates({ cert }) {
     unit: 'px',
     format: [400, 500]
   }
+  function titleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+      return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+  }
   return (
     <>
     <Navbar wid='600px' name={cert.name}/>
@@ -35,7 +40,7 @@ export default function Certificates({ cert }) {
       <div ref={ref} className='flex justify-center'  >
         <Image src={cttt} height={480} width={600} alt={'title'} />
         <div className='pt-40 w-96 absolute font-Italianno text-2xl'>Lorem ipsum dolor sit amet c Laborum, corporis.</div>
-        <div className='absolute pt-48 text-5xl font-Parisienne min-w-max'>{cert.name}</div>
+        <div className='absolute pt-48 text-5xl font-Parisienne min-w-max'>{titleCase(cert.name)}</div>
         <div className=' absolute pt-60 w-96 text-2xl font-Italianno'>this jdjjdjd Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, fuga vero iste unde blanditiis cupiditate possimus </div>
           <div className='ml-6 mt-8 absolute pt-80 pr-72 max-w-xl ' >Id:{cert.id }</div>
         
