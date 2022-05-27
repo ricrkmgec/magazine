@@ -54,11 +54,11 @@ export default function Certificates({ cert }) {
             <Image src={scan} height={90} width={90} alt='scanqr' />
           </div>
          
-          <div className='absolute pt-80 mt-8 max-w-xl pl-96 mr-24 leading-4 text-emerald-700 ' style={{ minWidth: '600px' }}><span className='overline decoration-wavy ml-4 text-xl leading-3 '>(Koushik Bishayee)</span> <br />
+          <div className='absolute pt-80 mt-8 max-w-xl pl-96 mr-24 leading-4 text-emerald-700 ' style={{ minWidth: '600px' }}><span className='overline decoration-wavy ml-6 text-sm  leading-3 '> &nbsp; (Koushik Bishayee) &nbsp; </span> <br />
           <span className='text-xs'>Convenor, Magazine Committee,</span>
-            <br /><span className='mx-8 text-xl leading-4'>ECE, RKMGEC </span></div>
+            <br /><span className='mx-8 text-sm leading-4'>ECE, RKMGEC </span></div>
 
-          <div className=' absolute pt-72 mt-4  pl-64 ml-6 ' style={{ minWidth: '400px' }}>
+          <div className=' absolute pt-72 mt-6  pl-64 ml-6 ' style={{ minWidth: '400px' }}>
             <Image src={sn} height={50} width={100} alt='' />
           </div>
         </div>
