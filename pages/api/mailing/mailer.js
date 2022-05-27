@@ -19,10 +19,10 @@ const sendResetPasswordEmail = async function ({ toEmail }) {
                 to: allUser[i].email,
                 subject: "RKMGEC - ECE MAGAZINE CERTIFICATE",
                 html: `
-            <h3 > Hello <h2>${allUser[i].name}</h2> </h3>
-            <p>To get certificate check here <a target="_" href="${process.env.DOMAIN}">Click</a></p>
+            <h3 >Dear <span style='font-size:bold'>${allUser[i].name}</span>, </h3>
+            <p>Congratulations  your content is selection for ECE,RKMGEC departmental magazine - "MOUNISH".You can collect your certificate from <a target="_" href="${process.env.DOMAIN}">here</a></p>
             <p>Thanks</p>
-            <h4>RKMGEC ECE MAGAZINE ADMIN</h4>
+            <h4>RKMGEC ECE MAGAZINE TEAM</h4>
           `,
             }
             transporter.sendMail(message, function (err, info) {
