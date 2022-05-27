@@ -20,8 +20,11 @@ export default function Certificates({ cert }) {
     unit: 'px',
     format: [400, 500]
   }
-  // var textt=document.getElementById('#cname');
-  // textt.innerText.split("")
+  function titleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+      return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+  }
   return (
     <><>
       <Navbar wid='600px' name={cert.name} />
@@ -43,7 +46,7 @@ export default function Certificates({ cert }) {
           <div className='absolute z-10 pt-32 mt-2 text-teal-600 text-lg w-[28rem]'>Ramkrishnna Mahato Government Engineering College</div>
           <Image src={CTTT} height={480} width={600} alt={'title'} />
           <div className='pt-44 -m-1 w-64 pl-10 absolute font-Italianno text-2xl '>This is to certify that, <span>{cert.pre}</span> </div>
-          <div className='absolute pt-48 mt-2 text-4xl font-Parisienne min-w-max'>{cert.name}</div>
+          <div className='absolute pt-48 mt-2 text-4xl font-Parisienne min-w-max'>{titleCase(cert.name)}</div>
           <div className=' absolute pt-60 mt-2 w-128 text-xl leading-5 font-Italianno'>Roll No - <span className='font-semibold'>{cert.roll}</span>, Year - <span className='font-semibold'>{cert.year} year</span> of ECE, RKMGEC, Purulia has successfully contributed creative content for departmental cultural magazine of ECE named  &quot;
             <span className='font-semibold'>MOUNISH</span> - The Conqueror of minds&quot;, 2022</div>
           <div className='ml-6  absolute pt-72 mt-6 pr-72 max-w-xl ' style={{ minWidth: '400px' }}>
