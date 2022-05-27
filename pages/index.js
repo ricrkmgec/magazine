@@ -53,10 +53,10 @@ export default function Home() {
         <Navbar href={`https://rkmgecece.netlify.app/verify`} text={'Verify'} />
         <form onSubmit={handleSubmit}>
           <div className=' flex flex-col  align-middle relative m-auto  p-4 sm:p-16 '>
-            <div className='bold text-xl sm:text-4xl  m-4 text-lime-500 mx-auto'><h1>Welcome to <span className='font-semibold  text-green-600'>ECE</span> magazine, Rkmgec</h1></div>
+            <div className='bold text-xl sm:text-4xl  m-4 text-lime-500 mx-auto'><h1>Welcome to <span className='font-semibold  text-green-600'>ECE</span> magazine, RKMGEC</h1></div>
             <input type='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} required={true} className='py-2 px-6 border-double border-2 rounded-full border-orange-600 justify-center mx-auto focus:outline-0' placeholder='Enter your email *' />
             <button type='submit' className='bg-orange-600 p-2 w-40 border-2 border-orange-600 rounded-full text-white text-3xl my-4 mx-auto shadow-gray-600 hover:bg-white hover:text-orange-600 focus:bg-white focus:text-orange-600 '>Check</button>
-            <p className='mb-52 m-auto'>* when you Fill up the form this mail is enter</p>
+            <p className='mb-28 m-auto'>*Please confirm You have received email</p>
           </div>
         </form>
       </div>
