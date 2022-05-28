@@ -31,6 +31,9 @@ const CertificateSchema = new mongoose.Schema(
     id: {
       type: String,
       required: true,
+    },
+    editor: {
+      type: Boolean,
     }
   },
   { timestamps: true }
