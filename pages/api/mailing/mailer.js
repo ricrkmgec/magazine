@@ -15,25 +15,27 @@ const sendResetPasswordEmail = async function ({ toEmail }) {
             }
         })
         for (let i = 0; i < allUser.length; i++) {
-            const message = {
-                to: allUser[i].email,
-                subject: "RKMGEC - ECE MAGAZINE CERTIFICATE",
-                html: `
-            <h3 >Dear <span style='font-size:bold'>${allUser[i].name}</span>, </h3>
-            <p>Congratulations!!🎊🎉🪘  your content is selected for ECE,RKMGEC departmental magazine - "MOUNISH" - 2022.You can collect your certificate from <a target="_" href="${process.env.DOMAIN}">here</a></p>
-            <p>Thank You🙏</p>
-            <h4>RKMGEC ECE MAGAZINE TEAM</h4>
-          `,
-            }
-            transporter.sendMail(message, function (err, info) {
-                if (err) {
-                    rej(err);
-                    toast.error(err.name)
-                } else {
-                    res(info);
-                    toast.info(info)
+            setTimeout(() => {  
+                const message = {
+                    // to: allUser[i].email,
+                    subject: "RKMGEC - ECE MAGAZINE CERTIFICATE",
+                    html: `
+                <h3 >Dear <span style='font-size:bold'>${allUser[i].name}</span>, </h3>
+                <p>Congratulations!!🎊🎉🪘  your content is selected for ECE,RKMGEC departmental magazine - "MOUNISH" - 2022.You can collect your certificate from <a target="_" href="${process.env.DOMAIN}">here</a></p>
+                <p>Thank You🙏</p>
+                <h4>RKMGEC ECE MAGAZINE TEAM</h4>
+              `,
                 }
-            })
+                transporter.sendMail(message, function (err, info) {
+                    if (err) {
+                        rej(err);
+                        toast.error(err.name)
+                    } else {
+                        res(info);
+                        toast.info(info)
+                    }
+                })
+            }, 1000);
 
         }
 
