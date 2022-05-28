@@ -29,7 +29,7 @@ export default function Certificates({ cert }) {
           <li> Roll No : {cert.roll}</li>
           <li> Year: {cert.year} </li>
           <li>Id : {cert.id}</li>
-          {cert.editor&&(<><li>Editor: {cert.editor}</li></>)}
+          {cert.editor&&(<><li>Editor:True</li></>)}
         </div>
 
       </div>
